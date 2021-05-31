@@ -1,7 +1,7 @@
 {% extends 'user/base.html'%}
 
  {% block title %}
-Register
+Login
 {% endblock %}
 {% load crispy_forms_tags %}
  {% block content %}
@@ -10,7 +10,7 @@ Register
 <script>
     //document.getElementsByClassName("example");
 </script>
-<div class="container" style="padding-left:21%; padding-right:21%;">
+<div class="container" style="padding-left:27%; padding-right:27%;">
     <form method="POST">
   <!--<legend class="form-group border-bottom pb=-4"></legend>-->
         {% csrf_token %}
@@ -18,7 +18,7 @@ Register
              {{ form | crispy }}
         </fieldset>
         <button class="form-group btn btn-outline-info" type="submit">
-            Sign Up
+            Sign In
         </button>
     </form>
 
