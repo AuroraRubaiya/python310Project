@@ -1,0 +1,40 @@
+
+{% extends 'user/base.html'%}
+
+{% block title %}
+Hotel page
+{%endblock%}
+
+{%block content%}
+<table>
+    <thead>
+          <tr align="center">
+              <th>Code</th>
+               <th>Name</th>
+              <th>Email</th>
+              <th>Contact_Number</th>
+              <th>Seat_Available</th>
+               <th>Location</th>
+          </tr>
+    </thead>
+
+    <tbody>
+        {% for hotel in hotels %}
+           <tr align="center">
+                <td>{{ hotel.hotel_code }}</td>
+                <td align="left">{{ hotel.hotel_name }}</td>
+                <td>{{ hotel.email }}</td>
+                <td>{{ hotel.contact_number }}</td>
+                <td>{{ hotel.seat_available}}</td>
+                <td>{{ hotel.location}}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+<!--<h1>This is hotel page</h1>
+My name is {{name}}
+<br>
+My email is {{emile}}-->
+{%endblock%}
